@@ -217,7 +217,7 @@ class _SignUpViewState extends State<SignUpView> {
                   },
                   child: RichText(
                     text: TextSpan(
-                      text: 'Já tem uma conta privada?',
+                      text: 'Já tem uma conta?',
                       style: kHaveAnAccountStyle(size),
                       children: [
                         TextSpan(
