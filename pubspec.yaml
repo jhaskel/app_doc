@@ -58,9 +58,11 @@ dependencies:
   dropdown_search: ^5.0.0
   toggle_switch: ^2.0.1
   datetime_picker_formfield_new: ^2.0.0
+  floating_tabbar: ^0.0.9
   syncfusion_flutter_pdf: ^20.2.50
   syncfusion_flutter_charts: ^20.2.36
   syncfusion_flutter_datagrid: ^20.4.52
+
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,5 @@
 
+import 'package:app_doc/src/home/view/tabs.dart';
 import 'package:app_doc/src/utils/widgets/texxto.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class HomeDesktop extends StatefulWidget {
 class _HomeDesktopState extends State<HomeDesktop> {
   int selectedPage = 0;
 
-  final pages = [PageOne(), PageTwo(),PageThree(), ];
+  final pages = [MyApp(), PageTwo(),PageThree(), ];
 
   @override
   Widget build(BuildContext context) {
