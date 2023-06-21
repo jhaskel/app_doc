@@ -1,9 +1,14 @@
+import 'package:app_doc/src/home/view/editor.dart';
+import 'package:app_doc/src/home/view/pdfPage.dart';
+import 'package:app_doc/src/home/view/report_pdf.dart';
 import 'package:floating_tabbar/Models/tab_item.dart';
 import 'package:floating_tabbar/Widgets/nautics.dart';
 import 'package:floating_tabbar/Widgets/top_tabbar.dart';
 import 'package:floating_tabbar/floating_tabbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+
 
 
 class MyApp extends StatefulWidget {
@@ -41,12 +46,35 @@ class _HomeState extends State<Home> {
       TabItem(
         onTap: () {},
         title: const Text("Nautics SideBar"),
-        tab: const Center(child: Text("Nautics SideBar", style: TextStyle(fontSize: 30))),
+        tab: Center(child: Text("Nautics SideBar"),)
       ),
       TabItem(
         onTap: () {},
         title: const Text("Public Events"),
-        tab: const Center(child: Text("Public Events", style: TextStyle(fontSize: 30))),
+        tab: Center(
+          child: Container(
+            margin: const EdgeInsets.only(top: 30),
+            height: 40,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                elevation: 5,
+                padding: const EdgeInsets.all(12.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+              ),
+              child: const Text(
+                'Get Report',
+                style:
+                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+              onPressed: () {
+                reportView(context);
+              },
+            ),
+          ),
+        ),
       ),
     ];
     return topTabbarTabItemlist;
@@ -67,7 +95,7 @@ class _HomeState extends State<Home> {
           onTap: () {},
           selectedLeadingIcon: const Icon(Icons.library_books),
           title: const Text("Report"),
-          tab: const Center(child: Text("Report", style: TextStyle(fontSize: 30))),
+          tab: Editor()
         ),
         TabItem(
           onTap: () {},
@@ -104,6 +132,8 @@ class _HomeState extends State<Home> {
     return floatingTabBarPageView();
   }
 }
+
+
 
 class ShowCase extends StatefulWidget {
   const ShowCase({Key? key}) : super(key: key);
@@ -245,3 +275,4 @@ class _ShowCaseState extends State<ShowCase> {
     );
   }
 }
+

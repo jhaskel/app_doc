@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:app_doc/src/response_api.dart';
+import 'package:app_doc/src/utils/response_api.dart';
 import 'package:app_doc/src/user/model/user.dart';
 import 'package:app_doc/src/utils/constants/environment/environment.dart';
 

@@ -31,6 +31,7 @@ class AppRoutes {
 
     GetPage(
         name: Routes.INITIAL,
+
         page: () => HomeMain(),
         transition: Transition.rightToLeftWithFade,
         transitionDuration: Duration(milliseconds: 600)

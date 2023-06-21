@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:app_doc/src/auth/service/user_service.dart';
-import 'package:app_doc/src/response_api.dart';
+import 'package:app_doc/src/utils/response_api.dart';
 import 'package:app_doc/src/routes/app_routes.dart';
 import 'package:app_doc/src/user/model/user.dart';
 

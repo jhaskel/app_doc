@@ -1,3 +1,6 @@
+import 'package:app_doc/src/home/view/home_desktop.dart';
+import 'package:app_doc/src/utils/widgets/custon_error.dart';
+import 'package:app_doc/src/utils/widgets/error.dart';
 import 'package:app_doc/src/routes/app_routes.dart';
 import 'package:app_doc/src/user/model/user.dart';
 import 'package:flutter/gestures.dart';
@@ -10,17 +13,23 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 User userSession = User.fromJson(GetStorage().read('user')?? {});
 
 void main() async {
+
   await GetStorage.init();
   runApp(App());
   setUrlStrategy(PathUrlStrategy());
+
+
 }
+
 
 class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
 
+
     return MyMaterialApp();
+
   }
 }
 
@@ -30,17 +39,22 @@ class MyMaterialApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-
+    final RouteObserver<ModalRoute<void>> routeObserver = RouteObserver<ModalRoute<void>>();
     return GetMaterialApp(
+
+
       locale: Locale('pt', 'BR'), // translations will be displayed in that locale
       scrollBehavior: MaterialScrollBehavior().copyWith(
         dragDevices: {PointerDeviceKind.mouse, PointerDeviceKind.touch, PointerDeviceKind.stylus, PointerDeviceKind.unknown},
       ),
+      navigatorObservers: <RouteObserver<ModalRoute<void>>>[ routeObserver ],
       title: 'App Doc',
+
       debugShowCheckedModeBanner: false,
       initialRoute: userSession.id == null
           ? '/login'
           : '/',
+
 
       theme: ThemeData(
           primaryColor: Colors.amber,
